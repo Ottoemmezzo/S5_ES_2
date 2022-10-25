@@ -14,10 +14,12 @@ function startSpese(){
     do{ 
         spesa[i]=Math.floor(Math.random()*100)+1;
         spesaTot=spesa.reduce(somma);
-        lista.innerHTML+=`<li> ${i+1}°importo: ${spesa[i]} di ${budget}</li>`;
+        lista.innerHTML+=`<li> ${i+1}°importo: ${spesa[i]}</li>\n
+                          nuovo budget aggiornato: ${budget-spesaTot} <br>`;
         i++;
     } while(spesaTot<=budget-200)
-    msg.innerHTML=`Hai speso:${spesaTot}!===>Hai raggiunto il tetto di spesa Massima!`
+    msg.innerHTML=`Hai speso:${spesaTot}!===>Hai raggiunto il tetto di spesa Massima!\n
+                   Hai acquistato n°:${i+1}oggetti `;
 
 
 }
